@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  /* Brand Colors - Beige & Charcoal Luxury */
+  --bg-body: #F5F1E8;
+  /* Premium Beige/Almond */
+  --bg-card: #FFFFFF;
+  /* White cards */
+  --bg-input: #FFFFFF;
+
+  --primary-color: #C6A85A;
+  /* Soft Gold (Kept as accent) */
+  --primary-hover: #D4B483;
+  --secondary-color: #2b2c30;
+  /* Charcoal */
+  --accent-color: #C6A85A;
+
+  /* Text */
+  --text-main: #2b2c30;
+  /* Charcoal Black */
+  --text-muted: #666666;
+  /* Darker Grey for legibility */
+  --text-dark: #FFFFFF;
+  /* Inverse (for dark buttons) */
+
+  /* Spacing & Borders */
+  --radius-pill: 50px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+
+  /* Shadows (Subtle Warmth) */
+  --shadow-gold: 0 4px 20px rgba(198, 168, 90, 0.15);
+  --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+
+  color-scheme: light;
+  /* Switched to light */
+  color: var(--text-main);
+  background-color: var(--bg-body);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-body);
+  /* Subtle grain or very faint warm radial */
+  background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%);
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  color: #2b2c30;
+  /* Explicitly requested */
+  margin: 0 0 1rem 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+/* Inputs */
+input,
+textarea {
+  background: var(--bg-input);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px rgba(198, 168, 90, 0.3);
+}
